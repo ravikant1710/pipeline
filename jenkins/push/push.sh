@@ -3,6 +3,7 @@ echo "******Pushing Image*****************"
 echo "************************************"
 
 IMAGE="maven-project"
+
 echo "***Logging IN***********************"
 docker login -u ravikant1710 -p $PASS
 echo "**********Tagging image ************"
