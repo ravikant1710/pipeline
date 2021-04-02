@@ -1,0 +1,18 @@
+version: "3"
+services:
+  remote_host:
+    container_name: remote-host
+    image: remote-host
+    build:
+      context: centos7
+#    ports:
+#      - "8080:8080"    
+    volumes:
+      - "/opt/pipeline/jenkins/deploy/docker-compose.ym:/home/remote_user/maven"
+      - "/opt/pipeline/jenkins/deploy/publis:/home/remote_user/maven"
+      - "/tmp/.auth:/tmp/.auth"
+    networks:
+      - net
+networks:
+  net:
+
