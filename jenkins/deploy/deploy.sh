@@ -1,8 +1,8 @@
 #!/bin/bash
-
-echo maven-project > /tmp/auth
-echo $BUILD_TAG >> /tmp/auth
-echo $PASS >> /tmp/auth
+WORKSPACE=/opt/jenkins_home/jenkins_home/workspace/pipeline
+echo maven-project > $WORKSPACE/centos7/auth
+echo $BUILD_TAG >> $WORKSPACE/centos7/auth
+echo $PASS >> $WORKSPACE/centos7/auth
 
 
 cd jenkins/deploy/ && docker-compose up -d

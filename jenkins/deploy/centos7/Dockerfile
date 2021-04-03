@@ -24,5 +24,5 @@ CMD /usr/bin/docker -D
 RUN mkdir /home/remote_user/maven
 COPY  docker-compose.yml /home/remote_user/maven/docker-compose.yml
 COPY  publish /home/remote_user/maven/publish
-COPY  /tmp/auth /home/remote_user/maven/auth
+COPY  auth /home/remote_user/maven/auth
 ENTRYPOINT ["/home/remote_user/maven/publish"]
