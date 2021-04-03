@@ -1,8 +1,10 @@
 #!/bin/bash
 
-echo maven-project > /opt/pipeline/jenkins/deploy/remote-host/.auth
-echo $BUILD_TAG >> /opt/pipeline/jenkins/deploy/remote-host/.auth
-echo $PASS >> /opt/pipeline/jenkins/deploy/remote-host/.auth
+WORKSPACE=/opt/jenkins_home/jenkins_home/workspace/pipeline
+
+echo maven-project > $WORKSPACE/jenkins/deploy/centos7/.auth
+echo $BUILD_TAG >> $WORKSPACE/jenkins/deploy/centos7/.auth
+echo $PASS >> $WORKSPACE/jenkins/deploy/centos7/.auth
 
 
 cd jenkins/deploy/ && docker-compose up -d
