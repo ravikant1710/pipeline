@@ -1,0 +1,7 @@
+#!/bin/bash
+export IMAGE=$(sed -n '1p' /home/remote_user/maven/.auth)
+export TAG=$(sed -n '2p' /home/remote_user/maven/.auth)
+export PASS=$(sed -n '3p' /home/remote_user/maven/.auth)
+
+docker login -u ravikant1710 -p $PASS
+cd /home/remote_user/maven && docker-compose up -d
